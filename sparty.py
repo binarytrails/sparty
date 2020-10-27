@@ -179,6 +179,7 @@ def audit(target=[]):
 # dump frontpage service and administrators password files if present
 
 def dump_credentials(dest):
+        filename = None
         pwd_targets = []
         pwd_files = ['_vti_pvt/service.pwd','_vti_pvt/administrators.pwd','_vti_pvt/authors.pwd']
 
@@ -206,7 +207,8 @@ def dump_credentials(dest):
                 print "[*] ---------------------------------------------------------------------------------------"
 
 
-        print "[+] check the (%s) file if generated !\n" %(filename)
+        if (filename):
+            print "[+] check the (%s) file if generated !\n" %(filename)
 
 
 
