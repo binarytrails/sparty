@@ -91,7 +91,7 @@ except ImportError:
 
 def check_python():
         version = sys.version_info
-        if version[:2] != (2,6):
+        if version[:2] > (2,7):
                 print "[-] Sparty is written in Python 2.6.5 (final). Kindly use that version!"
                 sys.exit(0)
 
